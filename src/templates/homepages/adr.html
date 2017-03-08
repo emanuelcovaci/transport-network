@@ -1,0 +1,43 @@
+{% extends "base_post.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+
+        <!--main-->
+<main class="mdl-layout__content">
+    <div class="site-content">
+        <div class="mdl-grid site-max-width">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+              <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Transport ADR</h1>
+            </div>
+              <div class="mdl-card__media"><img class="article-image" src="{% static "public/adr.jpg"%}" border="0" alt="Portfolio Page"></div>
+
+      <div class="mdl-grid site-copy">
+           <div class="mdl-cell mdl-cell--12-col"><p><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introducere</h3></p>
+                <div class="mdl-cell mdl-cell--10-col mdl-card__supporting-text no-padding ">
+                        <p>
+                            Transporturile rutiere de marfuri periculoase sunt reglementate prin acorduri internationale, reglementari ale Uniunii Europene, precum si prin legislatia naționala.
+                        </p>
+                    <p>
+                        Transportul marfurilor periculoase este reglementat cu scopul de a preveni, pe cât posibil, accidentele si daunele cauzate oamenilor, mediului, mijloacelor de transport sau bunurilor.
+Expedierea marfurilor periculoase trebuie efectuata numai dupa o clasificare si ambalare adecvate.
+
+                    </p>
+                    <p>
+                        BODALM pune la dispozitie acest tip de transport, cu conditia ca inainte de a fi preluata marfa ADR soferul autovehiculului respectiv sa fie anuntat de denumirea clasei marfei periculoase.
+
+                    </p>
+                </div>
+
+
+
+            </div>
+           </div>
+            </div>
+          </div>
+        </div>
+
+ {% endblock %}
