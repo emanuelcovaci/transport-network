@@ -1,0 +1,51 @@
+{% extends "base_post.html" %}
+{% load staticfiles %}
+{% block content %}
+
+
+<!--Main-->
+      <main class="mdl-layout__content">
+        <div class="site-content">
+          <div class="mdl-grid site-max-width">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+              <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Contact</h1>
+              </div>
+              <div class="mdl-card__media"><img class="article-image" src="{% static "public/contact.jpg"%}" border="0" alt="Contact">
+              </div>
+
+              <div class="mdl-grid site-copy">
+                <div class="mdl-cell mdl-cell--12-col"><div class="mdl-card__supporting-text">
+  <p>Contact our team using the contact form below:</p>
+
+
+  <form method="POST" class="form-contact">
+     {% csrf_token %}
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
+          <label class="mdl-textfield__label" for="Name">Name...</label>
+          <span class="mdl-textfield__error">Letters and spaces only</span>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="text" id="Email" name="_replyto">
+          <label class="mdl-textfield__label" for="Email">Email...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="message"></textarea>
+          <label class="mdl-textfield__label" for="note">Enter note</label>
+      </div>
+      <p>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+              Submit
+          </button>
+      </p>
+  </form>
+</div></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22339.055943217973!2d21.300500985846778!3d45.582865155978695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474ff77946d0a317%3A0x3540e852249ad0f!2sLiebling!5e0!3m2!1sro!2sro!4v1489002599380" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+           {% endblock %}
