@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+        {% load staticfiles %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Page</title>
+    <meta name="description" content="Your portfolio page description"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+    <link href="{% static "blog/styles/main.css"%}" rel="stylesheet">
+  </head>
+  <body id="top">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="contact.html" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">mail</i></a>
+
+        <header style="background-color:#4db6ac !important;" class="mdl-layout__header mdl-layout__header--waterfall site-header">
+
+        <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+             <a class="mdl-navigation__link"  href="/">BODALM</a>
+          <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+
+              <a class="mdl-navigation__link" href="/">Acasa</a>
+              <a class="mdl-navigation__link" href="portfolio.html">Transport intern</a>
+              <a class="mdl-navigation__link" href="about.html">Transport ADR</a>
+ <a class="mdl-navigation__link" href="contact.html">Frigorific</a>
+              <a class="mdl-navigation__link" href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+        <nav   class="mdl-navigation mdl-typography--body-1-force-preferred-font"><a class="mdl-navigation__link" href="index.html">Home</a><a class="mdl-navigation__link" href="portfolio.html">Portfolio</a><a class="mdl-navigation__link" href="about.html">About</a><a class="mdl-navigation__link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+
+
+        <!--main-->
+      <main class="mdl-layout__content">
+        <div class="site-content">
+          <div class="mdl-grid site-max-width">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+              <div class="mdl-card__title">
+                <h1 class="mdl-card__title-text">Transport intern de marfa</h1>
+              </div>
+
+
+              <div class="mdl-card__media"><img class="article-image" src="{% static "public/3.jpg"%}" border="0" alt="Portfolio Page">
+              </div>
+              <div class="mdl-grid site-copy">
+                <div class="mdl-cell mdl-cell--12-col"><p><h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introducere</h3></p>
+<div class="mdl-cell mdl-cell--10-col mdl-card__supporting-text no-padding ">
+    <p>
+        Transportul rutier de marfă desemnează deplasarea în spațiu a mărfurilor cu ajutorul autovehicolelor specializate . Autovehiculele au o mobilitate deosebită, nefiind legate de instalații speciale fixe cum este cazul în transportul feroviar, de pildă (linii de cale ferată, depouri, triaje etc.)
+    </p>
+    <p>
+        Deoarece ele pot pătrunde în locuri unde alte mijloace de transport nu au accesibilitate, constituie o componentă indispensabilă a transporturilor multimodale. Cu ajutorul autovehiculelor se pot organiza transporturi directe de la furnizor și până la beneficiarul mărfurilor din țară.
+
+    </p>
+    <p>
+        BODALM este reteaua de transport marfa interna pe o distanta dorita de dumneavoastra.
+
+    </p>
+</div>
+
+
+
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="footer-container">
+            <div class="mdl-logo">&copy; Unitiled. Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+            <ul class="mdl-mini-footer__link-list">
+              <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+      <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+    </div>
+  </body>
+</html>

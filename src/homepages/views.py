@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request,'homepages/index.html')
+
+def transport(request):
+    return render(request,'homepages/blog.html')
