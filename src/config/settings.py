@@ -18,7 +18,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "../media")
 
-
+# Email configuration
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail,com'
+EMAIL_HOST_USER = 'username@gmail.com'
+EMAIL_PORT = 587
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -40,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'widget_tweaks',
     'homepages',
     'contact',
 ]
