@@ -29,6 +29,10 @@ EMAIL_PORT = 587
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0ts6rgvl902=-en*1vb*ka9tdm-o$ftm+f5t#8@9$=(3^_!*r1'
 
+
+RECAPTCHA_PUBLIC_KEY = '6LcyWRgUAAAAACNs1HuoRIQH286K6y46nn6u9-mN'
+RECAPTCHA_PRIVATE_KEY = '6LcyWRgUAAAAACf7XeuHdTt5HRYTRZLwBR0WtYt0'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'widget_tweaks',
+    'captcha',
     'homepages',
     'contact',
 ]
@@ -133,3 +138,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ( os.path.join(os.path.dirname(os.path.dirname(__file__)), "static"), )
+
+NOCAPTCHA = True
+RECAPTCHA_USE_SSL = False

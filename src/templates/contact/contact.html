@@ -38,7 +38,7 @@
            {% if form.sender_name.errors %}
                 <div class="alert alert-danger">
                     {% for error in form.sender_name.errors %}
-                     {{ error }}
+                    <strong>Upss!</strong>  {{ error }}
                     {% endfor %}
                 </div>
           {% endif %}
@@ -54,7 +54,7 @@
 
             <div class="alert alert-danger">
                 {% for error in form.sender_email.errors %}
-                         {{ error }}
+                         <strong>Upss!</strong> {{ error }}
                     {% endfor %}
 
             </div>
@@ -73,11 +73,15 @@
 
       <div class="alert alert-danger">
            {% for error in form.sender_text.errors %}
-                        {{ error }}
+                        <strong>Upss!</strong> {{ error }}
                {% endfor %}
       </div>
-      {% endif %}
 
+
+      {% endif %}
+      <div align="center">
+ {{ form.re_captcha|add_class:"form-control"|attr:"required:required" }}
+      </div>
 
       <p>
          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
