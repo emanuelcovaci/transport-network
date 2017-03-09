@@ -1,4 +1,5 @@
 from django import forms
+from django.core.validators import validate_email
 
 
 class SendMailForm(forms.Form):
@@ -12,9 +13,6 @@ class SendMailForm(forms.Form):
 
     def clean_sender_email(self):
         email = self.cleaned_data.get('sender_email')
-
-        if '@' in email:
-            return email
-        else:
-            forms.ValidationError("Introduce un email valid. Verifica daca ai scris adresa corect , "
-                                  "trebuie sa contina caracterul @ si domeniul.com ex: nume_utilizator@gmail.com")
+        if validate_email(email):
+            raise forms.ValidationError("Introduceti un email valid!")
+        return email

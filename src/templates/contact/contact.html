@@ -4,7 +4,6 @@
 {% block content %}
 
 
-<!--Main-->
       <main class="mdl-layout__content">
         <div class="site-content">
           <div class="mdl-grid site-max-width">
@@ -14,76 +13,83 @@
               </div>
               <div class="mdl-card__media"><img class="article-image" src="{% static "public/contact.jpg"%}" border="0" alt="Contact">
               </div>
-
               <div class="mdl-grid site-copy">
                 <div class="mdl-cell mdl-cell--12-col"><div class="mdl-card__supporting-text">
-                    {% if messages %}
-                        <div class="row">
-                            <div class="col-sm-6 col-sm-offset-3">
-                                {% for message in messages %}
-                                    {% if message.tags == "success" %}
-                                    <p class="alert alert-success">{{ message }}</p>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endif %}
   <p>Contact our team using the contact form below:</p>
-
-
   <form method="POST" class="form-contact" role="form" action="{% url 'contact:contact' %}">
      {% csrf_token %}
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-         <!-- <input class="mdl-textfield__input" pattern="[A-Z,a-z, ]*" type="text" id="Name" name="name">
+
+<!---->
+      {% if messages %}
+                        <div class="alert alert-success">
+                            {% for message in messages %}
+                                    {% if message.tags == "success" %}
+                                             {{ message }}
+                                    {% endif %}
+                                {% endfor %}
+                        </div>
+                    {% endif %}
+
+
+      <div class="mdl-textfield mdl-js-textfield ">
+           {{ form.sender_name|add_class:"mdl-textfield__input" }}
+
           <label class="mdl-textfield__label" for="Name">Name...</label>
-          <span class="mdl-textfield__error">Letters and spaces only</span>-->
-          {% if form.sender_name.errors %}
-            {% for error in form.sender_name.errors %}
-                <div class="error">
-                    <li class="alert alert-danger"> {{ error }} </li>
+
+           {% if form.sender_name.errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.sender_name.errors %}
+                     {{ error }}
+                    {% endfor %}
                 </div>
-            {% endfor %}
           {% endif %}
-          {{ form.sender_name|add_class:"mdl-textfield__input" }}
-          <label class="mdl-textfield__label" for="Name">Name...</label>
-          <span class="mdl-textfield__error">Letters and spaces only</span>
+
       </div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <!--<input class="mdl-textfield__input" type="text" id="Email" name="_replyto">-->
-          {% if form.sender_email.errors %}
-            {% for error in form.sender_email.errors %}
-                <div class="error">
-                    <li class="alert alert-danger"> {{ error }} </li>
-                </div>
-            {% endfor %}
-          {% endif %}
-          {{ form.sender_email|add_class:"mdl-textfield__input" }}
+
+
+      <div class="mdl-textfield mdl-js-textfield ">
+         {{ form.sender_email|add_class:"mdl-textfield__input" }}
           <label class="mdl-textfield__label" for="Email">Email...</label>
-      </div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <!--<textarea class="mdl-textfield__input" type="text" rows="5" id="note" name="message"></textarea>-->
-          {% if form.sender_text.errors %}
-            {% for error in form.sender_text.errors %}
-                <div class="error">
-                    <li class="alert alert-danger"> {{ error }} </li>
-                </div>
-            {% endfor %}
+
+               {% if form.sender_email.errors %}
+
+            <div class="alert alert-danger">
+                {% for error in form.sender_email.errors %}
+                         {{ error }}
+                    {% endfor %}
+
+            </div>
           {% endif %}
-          {{ form.sender_text|add_class:"mdl-textfield__input" }}
-          <label class="mdl-textfield__label" for="note">Enter note</label>
       </div>
+
+
+
+
+      <div class="mdl-textfield mdl-js-textfield ">
+          {{ form.sender_text|add_class:"mdl-textfield__input"|add_class:"mdl-textfield--floating-label" }}
+          <label class="mdl-textfield__label" for="note">Enter note</label>
+
+      </div>
+      {% if form.sender_text.errors %}
+
+      <div class="alert alert-danger">
+           {% for error in form.sender_text.errors %}
+                        {{ error }}
+               {% endfor %}
+      </div>
+      {% endif %}
+
+
       <p>
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
               Submit
           </button>
       </p>
   </form>
 </div></div>
-
               </div>
             </div>
           </div>
         </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22339.055943217973!2d21.300500985846778!3d45.582865155978695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x474ff77946d0a317%3A0x3540e852249ad0f!2sLiebling!5e0!3m2!1sro!2sro!4v1489002599380" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </main>
-          {% endblock %}
+
+ {% endblock %}
