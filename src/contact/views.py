@@ -11,8 +11,8 @@ def contact(request):
         send_form = SendMailForm(request.POST)
         confirm = []
         if send_form.is_valid():
-            #send_mail("Comanda Transport", send_form.cleaned_data['sender_text'], send_form.cleaned_data['sender_email'],
-                      #[settings.EMAIL_HOST_USER], fail_silently=True)
+            send_mail("Comanda Transport", send_form.cleaned_data['sender_text'], send_form.cleaned_data['sender_email'],
+                      [settings.EMAIL_HOST_USER], fail_silently=True)
             confirm.append("Comanda ta a fost transmisa cu success")
             return render(request, 'contact/contact.html', context={'form': send_form,
                                                                     'messages': confirm})
