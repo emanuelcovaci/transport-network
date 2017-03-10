@@ -18,6 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "../media")
 
+
 from .local import EMAIL_HOST,EMAIL_HOST_USER,EMAIL_HOST_PASSWORD,EMAIL_PORT
 EMAIL_USE_TLS = True
 EMAIL_HOST=EMAIL_HOST
@@ -25,8 +26,8 @@ EMAIL_HOST_USER=EMAIL_HOST_USER#insert email
 EMAIL_HOST_PASSWORD=EMAIL_HOST_PASSWORD#insert password
 EMAIL_PORT=EMAIL_PORT
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
+
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '0ts6rgvl902=-en*1vb*ka9tdm-o$ftm+f5t#8@9$=(3^_!*r1'

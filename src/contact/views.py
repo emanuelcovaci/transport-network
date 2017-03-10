@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from django.conf import settings
+from django.shortcuts import render
 from django.contrib import messages
 from .forms import SendMailForm
 from django.core.mail import send_mail
