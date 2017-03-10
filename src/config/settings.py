@@ -19,10 +19,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "../media")
 
 # Email configuration
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail,com'
-EMAIL_HOST_USER = 'username@gmail.com'
-EMAIL_PORT = 587
+from .email_info import EMAIL_USE_TLS , EMAIL_HOST, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD, EMAIL_PORT
+EMAIL_USE_TLS = EMAIL_USE_TLS
+EMAIL_HOST = EMAIL_HOST
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_PORT = EMAIL_PORT
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
