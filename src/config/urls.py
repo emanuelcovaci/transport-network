@@ -35,4 +35,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^', include('homepages.urls')),
     url(r'^', include('contact.urls')),
+    url(r'^', include('gallery.urls'))
 ]

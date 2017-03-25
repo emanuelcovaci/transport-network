@@ -72,6 +72,7 @@ INSTALLED_APPS = [
     'captcha',
     'homepages',
     'contact',
+    'gallery',
 ]
 
 MIDDLEWARE_CLASSES = [

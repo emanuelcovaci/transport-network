@@ -14,9 +14,6 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with Transport Network.  If not, see <http://www.gnu.org/licenses/>.
-from django.contrib import admin
-from .models import AlbumImage, CategoryAlbum
-# Register your models here.
 
-admin.site.register(AlbumImage)
-admin.site.register(CategoryAlbum)
+from django.contrib import admin
+# Register your models here.
