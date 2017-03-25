@@ -34,3 +34,8 @@ def transport_adr(request):
 def transport_frigorific(request):
     return render(request, 'homepages/frigorific.html')
 
+def gallery(request):
+    return render(request,'homepages/gallery.html')
+
+def photos(request):
+    return render(request,'homepages/photos.html')
