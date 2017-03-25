@@ -37,7 +37,7 @@
           <!-- start gallery content -->
  <div class="row">
 
-      <div class="col s4">
+      <!--<div class="col s4">
              <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
           <center><p>Vizualizati albumul</p></center>
       </div>
@@ -50,32 +50,38 @@
       <div class="col s4">
              <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
            <center><p>Vizualizati albumul</p></center>
+      </div>-->
+     {% for album in albums %}
+            <a href="{% url 'homepages:photos' album.album_name %}">
+                <div class="col s4">
+
+                </div>
+            </a>
+     {% endfor %}
+
+ </div>
+
+ <!--<div class="row">
+
+      <div class="col s4">
+             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
+           <center><p>Vizualizati albumul</p></center>
+      </div>
+
+      <div class="col s4">
+             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
+           <center><p>Vizualizati albumul</p></center>
+      </div>
+
+      <div class="col s4">
+             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
+           <center><p>Vizualizati albumul</p></center>
       </div>
 
 
  </div>
 
- <div class="row">
-
-      <div class="col s4">
-             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
-           <center><p>Vizualizati albumul</p></center>
-      </div>
-
-      <div class="col s4">
-             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
-           <center><p>Vizualizati albumul</p></center>
-      </div>
-
-      <div class="col s4">
-             <img   src="{% static "poze/11.jpg" %}"  alt="Unsplashed background img 2">
-           <center><p>Vizualizati albumul</p></center>
-      </div>
-
-
- </div>
-
-
+-->
 
 
 

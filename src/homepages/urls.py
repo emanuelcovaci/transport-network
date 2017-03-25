@@ -17,11 +17,13 @@
 from django.conf.urls import url
 from . import views
 
+app_name = "homepages"
+
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^intern', views.transport_intern, name='transport_intern'),
     url(r'^adr', views.transport_adr, name='transport_adr'),
     url(r'^frigorific', views.transport_frigorific, name='transport_frigorific'),
     url(r'^gallery', views.gallery, name='gallery'),
-    url(r'^photos', views.photos, name='photos')
+    url(r'^gallery/(?P<album_name>[a-zA-Z]+)/$', views.photos, name='photos')
 ]
