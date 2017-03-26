@@ -52,9 +52,10 @@
            <center><p>Vizualizati albumul</p></center>
       </div>-->
      {% for album in albums %}
-            <a href="{% url 'homepages:photos' album.album_name %}">
+            <a href="{% url 'gallery:photos' album.album_name %}">
                 <div class="col s4">
-
+                    <img src="{{ album.album_image.url }}" /> <br>
+                    {{ album.album_name}}
                 </div>
             </a>
      {% endfor %}
