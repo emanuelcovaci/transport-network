@@ -48,7 +48,8 @@
       </div>-->
      {% for photo in photos %}
         <div class="col s12">
-
+            <img src="{{ photo.image_field.url }}" />
+            <p>{{ photo.image_name }}</p>
         </div>
      {% endfor %}
 

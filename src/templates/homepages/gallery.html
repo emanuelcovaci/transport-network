@@ -37,7 +37,7 @@
           <!-- start gallery content -->
              <div class="row">
                  {% for album in albums %}
-                        <a href="{% url 'gallery:photos' album.album_name %}">
+                        <a href="{% url 'gallery:photos_page' album_name=album.album_name %}">
                             <div class="col s4">
                                 <img style="width: 250px; height: 250px;" src="{{ album.album_image.url }}" /> <br>
                                 {{ album.album_name}}
@@ -52,6 +52,5 @@
    </div>
  </section>
  <!-- End gallery  -->
-
 
  {% endblock %}
