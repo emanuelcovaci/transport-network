@@ -4,16 +4,11 @@ from .models import CategoryAlbum, AlbumImage
 
 
 def gallery(request):
-
-    if request.method == 'GET':
         albums = CategoryAlbum.objects.all()
         return render(request, 'homepages/gallery.html', context={'albums': albums})
 
 
 def photos(request, album_name):
-
-    if request.method == 'GET':
-
         album = CategoryAlbum.objects.get(album_name=album_name)
         album_photos = AlbumImage.objects.filter(album=album).all()
 
