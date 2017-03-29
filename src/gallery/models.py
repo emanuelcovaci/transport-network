@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 
-class CategoryAlbum(models.Model):
+class Album(models.Model):
 
     album_name = models.CharField(max_length=255, unique=True, null=False)
     album_image = models.ImageField(upload_to="albums/",
@@ -15,9 +15,9 @@ class CategoryAlbum(models.Model):
         return "%s" % self.album_name
 
 
-class AlbumImage(models.Model):
+class Photos(models.Model):
 
-    category_album = models.ForeignKey(CategoryAlbum, on_delete=models.CASCADE)
+    category_album = models.ForeignKey(Album, on_delete=models.CASCADE)
     image_name = models.CharField(max_length=255, unique=True, null=False)
     image_field = models.ImageField(upload_to="albums/photos/",
                                     default="albums/photos/no-img.jpg")
