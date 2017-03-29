@@ -42,15 +42,21 @@
         <header style="background-color:#a64dff !important;" class="mdl-layout__header mdl-layout__header--waterfall site-header ">
 
         <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
-             <a class="mdl-navigation__link"  href="/">BODALM</a>
+                 <div>
+                               <a href="/" >
+                      <img src="{% static "public/logo.png" %}" alt="logo" style="height:40px; width: 100% color: white"/>
+                               </a>
+
+                 </div>
           <div class="mdl-navigation mdl-typography--body-1-force-preferred-font">
 
               <a class="mdl-navigation__link" href="/">Acasa</a>
               <a class="mdl-navigation__link" href="/intern">Transport intern</a>
               <a class="mdl-navigation__link" href="/adr">Transport ADR</a>
               <a class="mdl-navigation__link" href="/frigorific">Frigorific</a>
+              {% if not album_page and not photos_page %}
               <a class="mdl-navigation__link" href="/galerie">Galerie</a>
-
+              {% endif %}
 
           </div>
             <a class="mdl-navigation__link" href="/contact">Contact</a>

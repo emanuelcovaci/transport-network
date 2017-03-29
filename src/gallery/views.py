@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse
 
 def gallery(request):
         albums = Album.objects.all()
-        return render(request, 'homepages/gallery.html', context={'albums': albums})
+        return render(request, 'homepages/gallery.html', context={'albums': albums,'album_page':1,})
 
 
 def photos(request, album_name=None):
@@ -15,4 +15,4 @@ def photos(request, album_name=None):
         album = Album.objects.get(album_name=album_name)
         album_photos = Photos.objects.filter(category_album=album).all()
 
-        return render(request, 'homepages/photos.html', context={"photos": album_photos})
+        return render(request, 'homepages/photos.html', context={"photos": album_photos,'photos_page':1,})
