@@ -20,37 +20,31 @@
 
 
 
-<section id="mu-gallery">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-12">
-         <div class="mu-gallery-area">
-          <!-- start title -->
-          <div class="mu-title">
-              <center>
-                  <h3 style="color: #a64dff ">BODALM</h3>
-            <h5>Albume</h5>
-              </center>
-          </div>
-             <br>
-          <!-- end title -->
-          <!-- start gallery content -->
-             <div class="row">
-                 {% for album in albums %}
-                        <a href="{% url 'gallery:photos_page' album_name=album.album_name %}">
-                            <div class="col s4">
-                                <img style="width: 250px; height: 250px;" src="{{ album.album_image.url }}" /> <br>
-                                {{ album.album_name}}
-                            </div>
-                        </a>
-                 {% endfor %}
 
-             </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
- <!-- End gallery  -->
+        <!--main-->
+<main class="mdl-layout__content">
+    <div class="site-content">
+        <div class="mdl-grid site-max-width">
+          {% for album in albums %}
+          <!--  start card -->
+
+            <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp page-content">
+              <div class="mdl-card__title">
+                <a href="{% url 'gallery:photos_page' album_name=album.album_name %}"><h1 class="mdl-card__title-text">{{ album.album_name}}</h1></a>
+            </div>
+              <div class="mdl-card__media">
+                  <img class="article-image" src="{% static "poze/intern.jpg"%}" border="0" alt="Portfolio Page">
+                </div>
+
+
+            </div>
+
+            <!-- end card -->
+            {% endfor %}
+          </div>
+        </div>
+
+
+
 
  {% endblock %}
