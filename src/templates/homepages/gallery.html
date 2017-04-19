@@ -30,13 +30,13 @@
 
             <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--4dp page-content">
               <div class="mdl-card__title">
-                <a href="{% url 'gallery:photos_page' album_name=album.album_name %}"><h1 class="mdl-card__title-text">{{ album.album_name}}</h1></a>
+                <a href="{% url 'gallery:photos_page' album_name=album.album_name %}"><h1 class="mdl-card__title-text">{{ album.album_name}}</h1>
             </div>
               <div class="mdl-card__media">
-                  <img class="article-image" src="{% static "poze/intern.jpg"%}" border="0" alt="Portfolio Page">
+                  <img class="article-image" src="{{ album.album_image.url }}" border="0" alt="Portfolio Page">
                 </div>
 
-
+              </a>
             </div>
 
             <!-- end card -->
